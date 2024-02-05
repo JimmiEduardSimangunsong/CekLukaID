@@ -169,6 +169,21 @@ const penagananhandler = async (req, res) => {
     }
 };
 
+const testhandler = async (req, res) => {
+    try {
+        return res.response({
+            status: 'success',
+            message: 'Test handler',
+        }).code(200);
+    } catch (err) {
+        console.error(err);
+        return res.response({
+            status: 'error',
+            message: 'Terjadi kesalahan pada server',
+        }).code(500);
+    }
+};
+
 module.exports = { masukhandler, daftarhandler, penagananhandler };
 
 

@@ -24,13 +24,9 @@ const User = sequelize.define('User', {
 
     const Treatment = sequelize.define('Treatment', {
       id: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
-      },
-      woundType: {
-        type: DataTypes.STRING,
-        allowNull: false,
       },
       penangananawal: {
         type: DataTypes.TEXT,
