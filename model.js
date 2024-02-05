@@ -21,5 +21,28 @@ const User = sequelize.define('User', {
     }, {
       timestamps: false, // Menonaktifkan kolom createdAt dan updatedAt
     });
+
+    const Treatment = sequelize.define('Treatment', {
+      id: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        primaryKey: true,
+      },
+      woundType: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      penangananawal: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+      },
+      rekomendasiobat: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+      },
+    }, {
+      timestamps: false, // Disable automatic createdAt and updatedAt
+    });
+
     
-    module.exports = { User };
+    module.exports = { User, Treatment};

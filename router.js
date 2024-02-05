@@ -1,4 +1,4 @@
-const {masukhandler,daftarhandler} = require('./handler');
+const {masukhandler,daftarhandler,penagananhandler} = require('./handler');
 
 const routes = [
     {
@@ -17,6 +17,11 @@ const routes = [
         method : 'POST',
         path : '/daftar',
         handler : daftarhandler,
+    },
+    {
+        method: 'POST',
+        path: '/penanganan',
+        handler: penagananhandler,
     },
 ]
 
