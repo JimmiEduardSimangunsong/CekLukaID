@@ -82,11 +82,23 @@ const penagananhandler = async (req, res) => {
 
         let woundTypeId;
         switch (predictionText) {
-            case 'Luka Sayat':
+            case 'Luka Tusuk':
                 if (answerQuestion1 === 'Iya' && answerQuestion2 === 'Tidak') {
-                    woundTypeId = 1;
+                    woundTypeId = 2;
                 } else if (answerQuestion1 === 'Tidak' && answerQuestion2 === 'Iya') {
                     woundTypeId = 2;
+                } else if (answerQuestion1 === 'Tidak' && answerQuestion2 === 'Tidak') {
+                    woundTypeId = 1;
+                } else if (answerQuestion1 === 'Iya' && answerQuestion2 === 'Iya') {
+                    woundTypeId = 2;
+                }
+                break;
+
+            case 'Luka Sayat':
+                if (answerQuestion1 === 'Iya' && answerQuestion2 === 'Tidak') {
+                    woundTypeId = 3;
+                } else if (answerQuestion1 === 'Tidak' && answerQuestion2 === 'Iya') {
+                    woundTypeId = 4;
                 } else if (answerQuestion1 === 'Tidak' && answerQuestion2 === 'Tidak') {
                     woundTypeId = 3;
                 } else if (answerQuestion1 === 'Iya' && answerQuestion2 === 'Iya') {
@@ -94,39 +106,27 @@ const penagananhandler = async (req, res) => {
                 }
                 break;
 
+            case 'Luka Lecet':
+                if (answerQuestion1 === 'Iya' && answerQuestion2 === 'Tidak') {
+                    woundTypeId = 6;
+                } else if (answerQuestion1 === 'Tidak' && answerQuestion2 === 'Iya') {
+                    woundTypeId = 5;
+                } else if (answerQuestion1 === 'Tidak' && answerQuestion2 === 'Tidak') {
+                    woundTypeId = 6;
+                } else if (answerQuestion1 === 'Iya' && answerQuestion2 === 'Iya') {
+                    woundTypeId = 5;
+                }
+                break;
+
             case 'Luka Bakar':
                 if (answerQuestion1 === 'Iya' && answerQuestion2 === 'Tidak') {
-                    woundTypeId = 5;
+                    woundTypeId = 7;
                 } else if (answerQuestion1 === 'Tidak' && answerQuestion2 === 'Iya') {
-                    woundTypeId = 6;
+                    woundTypeId = 8;
                 } else if (answerQuestion1 === 'Tidak' && answerQuestion2 === 'Tidak') {
                     woundTypeId = 7;
                 } else if (answerQuestion1 === 'Iya' && answerQuestion2 === 'Iya') {
                     woundTypeId = 8;
-                }
-                break;
-
-            case 'Luka Lecet':
-                if (answerQuestion1 === 'Iya' && answerQuestion2 === 'Tidak') {
-                    woundTypeId = 9;
-                } else if (answerQuestion1 === 'Tidak' && answerQuestion2 === 'Iya') {
-                    woundTypeId = 10;
-                } else if (answerQuestion1 === 'Tidak' && answerQuestion2 === 'Tidak') {
-                    woundTypeId = 11;
-                } else if (answerQuestion1 === 'Iya' && answerQuestion2 === 'Iya') {
-                    woundTypeId = 12;
-                }
-                break;
-
-            case 'Luka Tusuk':
-                if (answerQuestion1 === 'Iya' && answerQuestion2 === 'Tidak') {
-                    woundTypeId = 13;
-                } else if (answerQuestion1 === 'Tidak' && answerQuestion2 === 'Iya') {
-                    woundTypeId = 14;
-                } else if (answerQuestion1 === 'Tidak' && answerQuestion2 === 'Tidak') {
-                    woundTypeId = 15;
-                } else if (answerQuestion1 === 'Iya' && answerQuestion2 === 'Iya') {
-                    woundTypeId = 16;
                 }
                 break;
 
